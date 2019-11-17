@@ -1,0 +1,24 @@
+FROM golang:1.13-buster
+LABEL arch=armhf
+
+ENV GOOS=linux
+ENV GOARCH=arm
+ENV CGO_ENABLED=1
+ENV CC=arm-linux-gnueabihf-gcc
+ENV PATH="/go/bin/${GOOS}_${GOARCH}:${PATH}"
+
+RUN dpkg --add-architecture armhf \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends \
+        protobuf-compiler \
+        upx \
+        gcc-arm-linux-gnueabihf \
+        libc6-dev-armhf-cross \
+        pkg-config:armhf \
+        libsamplerate0:armhf \
+        libsamplerate0-dev:armhf \
+        libopusfile-dev:armhf \
+        libopus-dev:armhf \
+        libportaudio2:armhf \
+        portaudio19-dev:armhf \
+    && rm -rf /var/lib/apt/lists/*
