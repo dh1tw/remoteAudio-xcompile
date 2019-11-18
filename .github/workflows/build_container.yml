@@ -1,0 +1,14 @@
+name: Build Container
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: ['linux-armhf', 'linux-arm64', 'linux-i386']
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build the Docker image
+      run: docker build ./${{ matrix.version }} --tag dh1tw/remoteaudio:${{ matrix.version }}
