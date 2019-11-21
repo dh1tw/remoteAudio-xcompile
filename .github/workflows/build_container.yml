@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        version: ['linux-armhf', 'linux-arm64', 'linux-i386']
+        version: ['linux-armhf', 'linux-arm64', 'linux-i386', 'linux-amd64']
     steps:
     - uses: actions/checkout@v1
     - name: Build the Docker image
