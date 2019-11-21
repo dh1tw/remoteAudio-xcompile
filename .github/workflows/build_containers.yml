@@ -1,4 +1,4 @@
-name: Build Container
+name: Build Containers
 
 on: [push, pull_request]
 
@@ -11,4 +11,4 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Build the Docker image
-      run: docker build ./${{ matrix.version }} --tag dh1tw/remoteaudio:${{ matrix.version }}
+      run: docker build ./${{ matrix.version }} --tag dh1tw/remoteaudio-xcompile:${{ matrix.version }}

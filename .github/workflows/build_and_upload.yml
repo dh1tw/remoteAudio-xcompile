@@ -1,4 +1,4 @@
-name: Build & Upload to Docker Hub
+name: Upload Container to Docker Hub
 
 on:
   push:
@@ -19,6 +19,6 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
     - name: Build container
-      run: docker build ./${{ matrix.version }} --tag dh1tw/remoteaudio:${{ matrix.version }}
+      run: docker build ./${{ matrix.version }} --tag dh1tw/remoteaudio-xcompile:${{ matrix.version }}
     - name: Upload to docker hub
-      run: docker push dh1tw/remoteaudio:${{ matrix.version }}
+      run: docker push dh1tw/remoteaudio-xcompile:${{ matrix.version }}
