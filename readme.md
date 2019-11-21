@@ -1,6 +1,6 @@
 # (Cross-)Compiling remoteAudio with Docker Containers
 
-![](https://github.com/dh1tw/remoteaudio-docker-xcompile/workflows/Build%20Containers/badge.svg)
+![](https://github.com/dh1tw/remoteaudio-xcompile/workflows/Build%20Containers/badge.svg)
 
 [remoteAudio](https://github.com/dh1tw/remoteAudio) is a flexible, low latency audio streaming solution (mainly) for remote amateur radio purposes.
 It is completely Open Source and written in [Go](https://golang.org). remoteAudio is available for all modern operating systems and architectures.
