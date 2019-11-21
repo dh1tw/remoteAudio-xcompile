@@ -25,6 +25,6 @@ You can also build the containers locally if you like. For example the one for l
 
 ``` bash
 
-$ docker build -t me:remoteaudio:linux-arm64 ./arm64
+$ docker build -t me/remoteaudio:linux-arm64 ./arm64
 
 ```
