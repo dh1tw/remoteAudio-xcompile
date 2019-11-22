@@ -6,6 +6,7 @@ ENV GOARCH=arm64
 ENV CGO_ENABLED=1
 ENV CC=aarch64-linux-gnu-gcc
 ENV PATH="/go/bin/${GOOS}_${GOARCH}:${PATH}"
+ENV PKG_CONFIG_PATH=/usr/lib/aarch64-linux-gnu/pkgconfig
 
 # install build & runtime dependencies
 RUN dpkg --add-architecture arm64 \
@@ -15,7 +16,7 @@ RUN dpkg --add-architecture arm64 \
         upx \
         gcc-aarch64-linux-gnu \
         libc6-dev-arm64-cross \
-        pkg-config:arm64 \
+        pkg-config \
         libsamplerate0:arm64 \
         libsamplerate0-dev:arm64 \
         libopusfile-dev:arm64 \

@@ -11,7 +11,7 @@ RUN apt update \
     && apt install -y --no-install-recommends \
         protobuf-compiler \
         upx \
-        pkg-config:amd64 \
+        pkg-config \
         libsamplerate0:amd64 \
         libsamplerate0-dev:amd64 \
         libopusfile-dev:amd64 \

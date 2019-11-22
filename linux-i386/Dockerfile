@@ -6,6 +6,7 @@ ENV GOARCH=386
 ENV CGO_ENABLED=1
 ENV CC=gcc
 ENV PATH="/go/bin/${GOOS}_${GOARCH}:${PATH}"
+ENV PKG_CONFIG_PATH=/usr/lib/i386-linux-gnu/pkgconfig
 
 # install build & runtime dependencies
 RUN dpkg --add-architecture i386 \
@@ -14,9 +15,9 @@ RUN dpkg --add-architecture i386 \
         protobuf-compiler \
         upx \
         gcc-multilib \
+        pkg-config \
         libc6-dev-i386 \
         linux-libc-dev:i386 \
-        pkg-config:i386 \
         libsamplerate0:i386 \
         libsamplerate0-dev:i386 \
         libopusfile-dev:i386 \
