@@ -6,6 +6,7 @@ ENV GOARCH=arm
 ENV CGO_ENABLED=1
 ENV CC=arm-linux-gnueabihf-gcc
 ENV PATH="/go/bin/${GOOS}_${GOARCH}:${PATH}"
+ENV PKG_CONFIG_PATH=/usr/lib/arm-linux-gnueabihf/pkgconfig
 
 # install build & runtime dependencies
 RUN dpkg --add-architecture armhf \
