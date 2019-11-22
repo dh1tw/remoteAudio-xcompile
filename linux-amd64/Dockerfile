@@ -22,5 +22,5 @@ RUN apt update \
 
 # install build dependencies (code generators)
 RUN go get github.com/gogo/protobuf/protoc-gen-gofast \
-    go get github.com/GeertJohan/go.rice/rice \
-    go get github.com/micro/protoc-gen-micro
+    && go get github.com/GeertJohan/go.rice/rice \
+    && go get github.com/micro/protoc-gen-micro
