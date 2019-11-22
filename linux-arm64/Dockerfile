@@ -7,6 +7,7 @@ ENV CGO_ENABLED=1
 ENV CC=aarch64-linux-gnu-gcc
 ENV PATH="/go/bin/${GOOS}_${GOARCH}:${PATH}"
 
+# install build & runtime dependencies
 RUN dpkg --add-architecture arm64 \
     && apt update \
     && apt install -y --no-install-recommends \
@@ -22,3 +23,8 @@ RUN dpkg --add-architecture arm64 \
         libportaudio2:arm64 \
         portaudio19-dev:arm64 \
     && rm -rf /var/lib/apt/lists/*
+
+# install build dependencies (code generators)
+RUN GOARCH=amd64 go get github.com/gogo/protobuf/protoc-gen-gofast \
+    && GOARCH=amd64 go get github.com/GeertJohan/go.rice/rice \
+    && GOARCH=amd64 go get github.com/micro/protoc-gen-micro
