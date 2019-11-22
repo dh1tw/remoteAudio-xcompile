@@ -17,7 +17,7 @@ You can compile the remoteAudio source code for armhf, arm64, i386 and amd64 dir
 
 ``` bash
 
-$ docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp dh1tw/remoteaudio-xcompile:linux-arm64 /bin/sh -c 'make install-deps && make dist'
+$ docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp dh1tw/remoteaudio-xcompile:linux-arm64 /bin/sh -c 'make dist'
 
 ```
 
