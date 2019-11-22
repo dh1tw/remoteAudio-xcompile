@@ -15,7 +15,7 @@ RUN dpkg --add-architecture armhf \
         upx \
         gcc-arm-linux-gnueabihf \
         libc6-dev-armhf-cross \
-        pkg-config:armhf \
+        pkg-config \
         libsamplerate0:armhf \
         libsamplerate0-dev:armhf \
         libopusfile-dev:armhf \
