@@ -1,4 +1,5 @@
 FROM golang:1.13-buster
+LABEL os=linux
 LABEL arch=amd64
 
 ENV GOOS=linux
