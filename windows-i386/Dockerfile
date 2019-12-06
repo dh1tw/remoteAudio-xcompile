@@ -27,8 +27,8 @@ RUN set -ex \
 
 # install golang
 RUN set -ex \
-    && wget -q https://dl.google.com/go/go$GOVERSION.linux-amd64.tar.gz \
-    && tar -C /usr/local -xzf go$GOVERSION.linux-amd64.tar.gz
+    && wget -P /tmp -q https://dl.google.com/go/go$GOVERSION.linux-amd64.tar.gz \
+    && tar -C /usr/local -xzf /tmp/go$GOVERSION.linux-amd64.tar.gz
 
 # install build dependencies
 RUN set -ex \
