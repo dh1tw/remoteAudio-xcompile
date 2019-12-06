@@ -40,7 +40,6 @@ RUN set -ex \
 
 # install runtime dependencies (DLLs)
 RUN set -ex \
-    && pacman-cross --noconfirm --needed -Sy mingw-w64-$MSYS2_ARCH-gcc \
     && pacman-cross --noconfirm --needed -Sy mingw-w64-$MSYS2_ARCH-libsamplerate \
     && pacman-cross --noconfirm --needed -Sy mingw-w64-$MSYS2_ARCH-portaudio \
     && pacman-cross --noconfirm --needed -Sy mingw-w64-$MSYS2_ARCH-opus \
