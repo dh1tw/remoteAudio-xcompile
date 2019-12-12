@@ -21,7 +21,9 @@ RUN dpkg --add-architecture i386 \
         linux-libc-dev:i386 \
         libsamplerate0:i386 \
         libsamplerate0-dev:i386 \
+        libopusfile0:i386 \
         libopusfile-dev:i386 \
+        libopus0:i386 \
         libopus-dev:i386 \
         libportaudio2:i386 \
         portaudio19-dev:i386 \

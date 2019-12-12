@@ -20,7 +20,9 @@ RUN dpkg --add-architecture armhf \
         pkg-config \
         libsamplerate0:armhf \
         libsamplerate0-dev:armhf \
+        libopusfile0:armhf \
         libopusfile-dev:armhf \
+        libopus0:armhf \
         libopus-dev:armhf \
         libportaudio2:armhf \
         portaudio19-dev:armhf \

@@ -20,7 +20,9 @@ RUN dpkg --add-architecture arm64 \
         pkg-config \
         libsamplerate0:arm64 \
         libsamplerate0-dev:arm64 \
+        libopusfile0:arm64 \
         libopusfile-dev:arm64 \
+        libopus0:arm64 \
         libopus-dev:arm64 \
         libportaudio2:arm64 \
         portaudio19-dev:arm64 \

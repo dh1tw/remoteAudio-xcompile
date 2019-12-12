@@ -15,7 +15,9 @@ RUN apt update \
         pkg-config \
         libsamplerate0:amd64 \
         libsamplerate0-dev:amd64 \
+        libopusfile0:amd64 \
         libopusfile-dev:amd64 \
+        libopus0:amd64 \
         libopus-dev:amd64 \
         libportaudio2:amd64 \
         portaudio19-dev:amd64 \
