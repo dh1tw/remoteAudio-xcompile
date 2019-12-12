@@ -46,18 +46,10 @@ RUN set -ex \
     && pacman-cross --noconfirm --needed -Sy mingw-w64-$MSYS2_ARCH-opusfile \
     && pacman-cross --noconfirm -Sc
 
-# Workaround for go get
-ENV GOOS=linux
-ENV GOARCH=amd64
-
 # install build dependencies (code generators)
 RUN set -ex \
-    && GOOS=linux GOOARCH=amd64 go get github.com/gogo/protobuf/protoc-gen-gofast \
-    && GOOS=linux GOOARCH=amd64 go get github.com/GeertJohan/go.rice/rice \
-    && GOOS=linux GOOARCH=amd64 go get github.com/micro/protoc-gen-micro
-
-# /workaround
-ENV GOOS=windows
-ENV GOARCH=386
+    && GOOS=linux GOARCH=amd64 go get github.com/gogo/protobuf/protoc-gen-gofast \
+    && GOOS=linux GOARCH=amd64 go get github.com/GeertJohan/go.rice/rice \
+    && GOOS=linux GOARCH=amd64 go get github.com/micro/protoc-gen-micro
 
 COPY ./scripts /scripts
