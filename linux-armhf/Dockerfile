@@ -1,4 +1,4 @@
-FROM golang:1.13-buster
+FROM golang:1.16-buster
 LABEL os=linux
 LABEL arch=armhf
 

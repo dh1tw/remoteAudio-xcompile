@@ -2,7 +2,7 @@ FROM rwgrim/msys2-cross
 LABEL os=windows
 LABEL arch=amd64
 
-ENV GOVERSION="1.13.4"
+ENV GOVERSION="1.16.3"
 ENV GOOS=windows
 ENV GOARCH=amd64
 ENV GOPATH=/go

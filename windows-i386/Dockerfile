@@ -2,7 +2,7 @@ FROM rwgrim/msys2-cross
 LABEL os=windows
 LABEL arch=i386
 
-ENV GOVERSION="1.13.4"
+ENV GOVERSION="1.16.3"
 ENV GOOS=windows
 ENV GOARCH=386
 ENV GOPATH=/go
