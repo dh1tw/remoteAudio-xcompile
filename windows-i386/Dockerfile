@@ -48,8 +48,8 @@ RUN set -ex \
 
 # install build dependencies (code generators)
 RUN set -ex \
-    && GOOS=linux GOARCH=amd64 go get github.com/gogo/protobuf/protoc-gen-gofast \
+    && GOOS=linux GOARCH=amd64 go get github.com/golang/protobuf/protoc-gen-go \
     && GOOS=linux GOARCH=amd64 go get github.com/GeertJohan/go.rice/rice \
-    && GOOS=linux GOARCH=amd64 go get github.com/micro/protoc-gen-micro
+    && GOOS=linux GOARCH=amd64 go get github.com/asim/go-micro/cmd/protoc-gen-micro/v3
 
 COPY ./scripts /scripts

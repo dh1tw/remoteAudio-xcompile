@@ -29,6 +29,6 @@ RUN dpkg --add-architecture armhf \
     && rm -rf /var/lib/apt/lists/*
 
 # install build dependencies (code generators)
-RUN GOARCH=amd64 go get github.com/gogo/protobuf/protoc-gen-gofast \
+RUN GOARCH=amd64 go get github.com/golang/protobuf/protoc-gen-go \
     && GOARCH=amd64 go get github.com/GeertJohan/go.rice/rice \
-    && GOARCH=amd64 go get github.com/micro/protoc-gen-micro
+    && GOARCH=amd64 go get github.com/asim/go-micro/cmd/protoc-gen-micro/v3

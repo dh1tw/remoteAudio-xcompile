@@ -24,6 +24,6 @@ RUN apt update \
     && rm -rf /var/lib/apt/lists/*
 
 # install build dependencies (code generators)
-RUN go get github.com/gogo/protobuf/protoc-gen-gofast \
+RUN go get github.com/golang/protobuf/protoc-gen-go \
     && go get github.com/GeertJohan/go.rice/rice \
-    && go get github.com/micro/protoc-gen-micro
+    && go get github.com/asim/go-micro/cmd/protoc-gen-micro/v3
