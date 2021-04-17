@@ -14,3 +14,4 @@ cp $LIBPATH/libportaudio-2.dll $DISTPATH
 cp $LIBPATH/libsamplerate-0.dll $DISTPATH
 cp $LIBPATH/libgcc_s_seh-1.dll $DISTPATH
 cp $LIBPATH/libwinpthread-1.dll $DISTPATH
+cp $LIBPATH/libssp-0.dll $DISTPATH
