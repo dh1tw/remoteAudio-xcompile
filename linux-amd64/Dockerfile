@@ -1,4 +1,4 @@
-FROM golang:1.16-buster
+FROM golang:1.17-buster
 LABEL os=linux
 LABEL arch=amd64
 
@@ -25,5 +25,4 @@ RUN apt update \
 
 # install build dependencies (code generators)
 RUN go get github.com/golang/protobuf/protoc-gen-go \
-    && go get github.com/GeertJohan/go.rice/rice \
     && go get github.com/asim/go-micro/cmd/protoc-gen-micro/v3

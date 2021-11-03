@@ -1,4 +1,4 @@
-FROM golang:1.16-buster
+FROM golang:1.17-buster
 LABEL os=linux
 LABEL arch=armhf
 
@@ -30,5 +30,4 @@ RUN dpkg --add-architecture armhf \
 
 # install build dependencies (code generators)
 RUN GOARCH=amd64 go get github.com/golang/protobuf/protoc-gen-go \
-    && GOARCH=amd64 go get github.com/GeertJohan/go.rice/rice \
     && GOARCH=amd64 go get github.com/asim/go-micro/cmd/protoc-gen-micro/v3

@@ -2,7 +2,7 @@ FROM rwgrim/msys2-cross
 LABEL os=windows
 LABEL arch=amd64
 
-ENV GOVERSION="1.16.3"
+ENV GOVERSION="1.17.2"
 ENV GOOS=windows
 ENV GOARCH=amd64
 ENV GOPATH=/go
@@ -49,7 +49,6 @@ RUN set -ex \
 # install build dependencies (code generators)
 RUN set -ex \
     && GOOS=linux GOARCH=amd64 go get github.com/golang/protobuf/protoc-gen-go \
-    && GOOS=linux GOARCH=amd64 go get github.com/GeertJohan/go.rice/rice \
     && GOOS=linux GOARCH=amd64 go get github.com/asim/go-micro/cmd/protoc-gen-micro/v3
 
 COPY ./scripts /scripts
