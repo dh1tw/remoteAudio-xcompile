@@ -30,6 +30,17 @@ RUN set -ex \
     && wget -P /tmp -q https://dl.google.com/go/go$GOVERSION.linux-amd64.tar.gz \
     && tar -C /usr/local -xzf /tmp/go$GOVERSION.linux-amd64.tar.gz
 
+
+# Workaraound: Update the keyring for signatures of new maintainers
+# See: https://github.com/msys2/MSYS2-packages/issues/2343
+RUN set -ex \
+    && rm /usr/share/pacman/keyrings/* \
+    && pacman-key --init \
+    && pacman -Syu \
+    && pacman -S msys2-keyring --noconfirm \
+    && pacman-key --populate msys2 \
+    && pacman -Syu
+
 # install build dependencies
 RUN set -ex \
     && pacman --noconfirm --needed -Sy mingw-w64-$MSYS2_ARCH-libsamplerate \
