@@ -37,11 +37,11 @@ $ docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp dh1tw/remoteaudio-x
 ## Get Windows runtime dependencies
 
 For compiling the Windows binaries, the [MinGW](https://en.wikipedia.org/wiki/MinGW) compiler is used. The
-needed runtime dependencies (DLLs) can be copied into the source directory after compilation with the following command:
+needed runtime dependencies (DLLs) can be copied into the source directory after compilation with the following command (Powershell):
 
 ```bash
 
-$ docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp dh1tw/remoteaudio-xcompile:windows-amd64 /bin/sh -c 'make dist && /scripts/getlibs.sh .'
+$ docker run --rm -v ${pwd}:/usr/src/myapp -w /usr/src/myapp dh1tw/remoteaudio-xcompile:windows-amd64 /bin/sh -c 'make dist && /scripts/getlibs.sh .'
 
 ```
 
