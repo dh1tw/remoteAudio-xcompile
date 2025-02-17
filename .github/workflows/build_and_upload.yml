@@ -12,7 +12,7 @@ jobs:
       matrix:
         version: ['linux-armhf', 'linux-arm64', 'linux-i386', 'linux-amd64', 'windows-amd64', 'windows-i386']
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v4
     - name: Build the Docker image
       uses: azure/docker-login@v1
       with:
